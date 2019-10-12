@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1550018106 source:c:\users\albri\desktop\selection sort algorithm hw\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+

@@ -1,0 +1,14 @@
+CC = g++
+CFLAGS = -Wall
+
+OBJ = hash_table.o
+
+all: hash_table
+
+hash_table: $(OBJ)
+	    $(CC) $(CFLAGS) -o hash_table $(OBJ)
+
+hash_table.o: hash_table.cpp
+
+clear: 
+	rm -f hash_table.o

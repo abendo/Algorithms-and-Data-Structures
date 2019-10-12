@@ -1,0 +1,39 @@
+#Albrit Bendo
+#(Not sure for this makefile)
+
+CC = g++
+CFLAGS = -Wall
+
+OBJ = BucketSort.o CountSort.o MSD_Radix.o RadixForString.o
+
+all: BucketSort.o ./
+     CountSort.o ./
+     MSD_Radix.o ./
+     RadixForString.o
+
+BucketSort: $(OBJ)
+            $(CC) $(CFLAGS) -o BucketSort $(OBJ)
+
+CountSort: $(OBJ)
+           $(CC) $(CFLAGS) -o CountSort $(OBJ)
+
+MSD_Radix: $(OBJ)
+           $(CC) $(CFLAGS) -o MSD_Radix $(OBJ)
+
+RadixForString: $(OBJ)
+           $(CC) $(CFLAGS) -o RadixForString $(OBJ)
+
+BucketSort.o: BucketSort.cpp
+
+CountSort.o: CountSort.cpp
+
+MSD_Radix.o: MSD_Radix.cpp
+
+RadixForString.o: RadixForString
+
+clean:
+    rm -f BucketSort *.o
+    rm -f CountSort *.o
+    rm -f MSD_Radix *.o
+    rm -f RadixForString *.o
+
